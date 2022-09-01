@@ -49,6 +49,7 @@ namespace Guessing.Controllers
             });
         }
 
+        [HttpGet, Route("highscore")]
         public IEnumerable<ScoreDto> HighScore()
         {
             return _games.OrderByDescending(a => a.GuessingTimes)
